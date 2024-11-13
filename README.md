@@ -6,7 +6,7 @@ Objectives:
 * Use len(string) to find the length of a string
 * Use some of the methods working with strings
 * Modify the content of strings
-* Import variables from other files
+* Import variables from other files0
 
 
 Read through the example files
