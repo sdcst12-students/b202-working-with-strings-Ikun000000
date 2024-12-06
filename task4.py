@@ -24,3 +24,20 @@ def main():
 
 if __name__ == "__main__":
   main()
+ranks = "A23456789TJQK"
+suits = "CDHS"
+
+def createDeck():
+  cardlist = [ranks[i]+suits[j] for i in range(len(ranks)) for j in range (len(suits))]
+  return cardlist
+
+def main():
+  deck = createDeck()
+  print(deck)
+  assert "AS" in deck
+  assert "KC" in deck
+  assert deck.count("TC") == 1
+
+
+if __name__ == "__main__":
+  main()
