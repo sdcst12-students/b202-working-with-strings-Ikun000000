@@ -29,3 +29,24 @@ if __name__ == "__main__":
 
     sentence = "I was a fat cat"
     assert split(sentence) == "I was a\n fat cat"
+
+    def split(input):
+    x=round(len(input)/2)
+    if input[x] !=' ' and x < len(input) - 1:
+        if input[x-1] !=' ' and input[x+1] !=' ':
+            return input[:x] + "-\n" + input[x:]
+    
+    y=input[:x].rsplit(' ', 1)[0]
+    z=input[len(y):].lstrip()
+    return y + "\n" + z
+
+
+if __name__ == "__main__":
+    sentence = "There is a big balloon in the blue sky"
+    assert split(sentence) == "There is a big ball-\noon in the blue sky"
+
+    sentence = "I am a fat cat"
+    assert split(sentence) == "I am a\nfat cat"
+
+    sentence = "I was a fat cat"
+    assert split(sentence) == "I was a\nfat cat"
